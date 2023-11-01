@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-import torch
-from setuptools import find_packages, setup
+#import torch
+from setuptools import setup
 
-torch_ver = [int(x) for x in torch.__version__.split(".")[:2]]
-assert torch_ver >= [1, 4], "Requires PyTorch >= 1.4"
+# torch_ver = [int(x) for x in torch.__version__.split(".")[:2]]
+
+# assert torch_ver >= [1, 4], "Requires PyTorch >= 1.4"
 
 setup(
     name="layoutlm",
@@ -11,7 +12,7 @@ setup(
     author="Yiheng Xu",
     url="https://github.com/microsoft/unilm/tree/master/layoutlm",
     description="LayoutLM",
-    packages=find_packages(exclude=("configs", "tests")),
+    #packages=find_packages(exclude=("configs", "tests")),
     python_requires=">=3.6",
     install_requires=[
         "transformers==2.9.0",
